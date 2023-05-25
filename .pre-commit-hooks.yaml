@@ -1,0 +1,20 @@
+---
+- id: update-aws-user-agent
+  name: Update AWS user agent variable
+  description: This hook updates hard-coded aws user agent variable from amazon collections
+  entry: aws_update_user_agent
+  language: python
+  files: "*"
+  types: [python]
+  pass_filenames: false
+  args: ["-p", "."]
+
+- id: update-aws-boto-constraints
+  name: Update boto3/botocore constraints for amazon collections
+  description: This hook runs the aws_update_boto_constraints script
+  entry: aws_update_boto_constraints
+  language: python
+  files: "*"
+  types: [python]
+  pass_filenames: false
+  args: ["-p", "."]
